@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -53,15 +53,22 @@ namespace project_machshevon
                 
                 if (userAnswer == real_answer)
                 {
-                    
+
+                    answerTextBox.Clear();
+                    sound_right.Visibility = Visibility.Visible;
+                    sound_right.Position = TimeSpan.Zero;
+                    sound_right.Play();
+
                     MessageBox.Show("Correct!");
                     points++;
-                    answerTextBox.Clear();
                 }
                 else
                 {
-                    
-                    MessageBox.Show("Incorrect. Try again!");
+                    answerTextBox.Clear();
+                    sound_wrong.Visibility = Visibility.Visible;
+                    sound_wrong.Position = TimeSpan.Zero;
+                    sound_wrong.Play();
+                    MessageBox.Show("Incorrect");
                 }
 
                 
@@ -81,10 +88,16 @@ namespace project_machshevon
             if (toggleButton.IsChecked == true)
             {
                 SetDarkMode();
+                ui_click.Visibility = Visibility.Visible;
+                ui_click.Position = TimeSpan.Zero;
+                ui_click.Play();
             }
             else
             {
                 SetLightMode();
+                ui_click.Visibility = Visibility.Visible;
+                ui_click.Position = TimeSpan.Zero;
+                ui_click.Play();
             }
         }
 
@@ -246,3 +259,4 @@ namespace project_machshevon
         }
     }
 }
+1
