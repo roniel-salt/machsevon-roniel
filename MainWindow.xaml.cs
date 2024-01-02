@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -38,6 +38,8 @@ namespace project_machshevon
             name = name_box.Text;
             age = age_box.Text.Trim();
             Window1 window1 = new Window1(name, age, isDarkMode);
+            ui_click.Visibility = Visibility.Visible;
+            ui_click.Play();
             window1.Show();
             this.Close();
         }
@@ -58,11 +60,18 @@ namespace project_machshevon
             {
                
                 SetDarkMode();
+                ui_click.Visibility = Visibility.Visible;
+                ui_click.Position = TimeSpan.Zero;
+                ui_click.Play();
+
             }
             else
             {
                
                 SetLightMode();
+                ui_click.Visibility = Visibility.Visible;
+                ui_click.Position = TimeSpan.Zero;
+                ui_click.Play();
             }
         }
 
