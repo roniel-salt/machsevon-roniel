@@ -1,4 +1,4 @@
-﻿<Window x:Class="project_machshevon.MainWindow"
+<Window x:Class="project_machshevon.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="450" Width="800">
@@ -7,6 +7,9 @@
             <RowDefinition  Height="auto" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
+
+        <MediaElement x:Name="ui_click" Visibility="Collapsed" LoadedBehavior="Manual" UnloadedBehavior="Manual" Source="C:\Users\ronie\Downloads\mixkit-cool-interface-click-tone-2568.wav" />
+
 
         <TextBlock Text="    Welcome!"
                    Name="text3"
